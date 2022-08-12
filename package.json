@@ -1,0 +1,15 @@
+{
+  "name": "beto",
+  "version": "1.0.0",
+  "description": "beto.eth nft bot",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server/index"
+  },
+  "author": "beto",
+  "license": "ISC",
+  "dependencies": {
+    "twit": "^2.2.11"
+  }
+}
