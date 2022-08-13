@@ -1,17 +1,17 @@
 let Twit = require('twit')
 
 let T = new Twit({
-  consumer_key:         'KXX5pTObZrNTgY9NAgpdahcnV',
-  consumer_secret:      'KBVCYdSeAHW6Hpl9haa51vlIEAaHfOwF0n6j5QmQYvyV1t4UQX',
-  access_token:         '1558082101781594118-HJnGTHEz8rF4eZNcuL6bfAMYp2GvUl',
-  access_token_secret:  'Ay1pQqf4B58Hm3KrshI3c9j50QRR9Q8iJOUqaAzsyzoOH',
+  consumer_key:         'Nszz82sEtNSq7M0sqEjREHbcC',
+  consumer_secret:      'WEQQcfLqXmOBRnONFyayMvuZtlGLPNZGY9JvtWybK9Cv1aHqJG',
+  access_token:         '1558082101781594118-7dPRmMjeIigZrjr0xI5V7yue5kcCjb',
+  access_token_secret:  'G28j9Lgpvwscy4cqHRAdz7fc7N5ojgIM73nZGHTUn3s3s',
 })
 
  
 let id_twitter;
 
 function buscar(){
-      T.get('search/tweets', { q: 'ethlatam', count: 1 }, function(err, data, response) {
+      T.get('https://www.twitter.com/search/tweets', { q: 'ethlatam', count: 1 }, function(err, data, response) {
         try {
             console.log(data)
         //    id_twitter = data.statuses[0].id_str; 
@@ -23,7 +23,7 @@ function buscar(){
   }
   
   function tuitear(tweet){
-      T.post('statuses/retweet/:id', { id: tweet }, function (err, data, response) {
+      T.post('https://www.twitter.com/statuses/retweet/:id', { id: tweet }, function (err, data, response) {
           console.log(data)
         })
   }
